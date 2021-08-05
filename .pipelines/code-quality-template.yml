@@ -6,6 +6,7 @@ steps:
 
 - script: |   
    python -m pytest driver_training/training/test_train.py --cov=driver_training --cov-report=html --cov-report=xml --junitxml=unit-testresults.xml
+   
   condition: succeededOrFailed()
   displayName: 'Run unit tests'
 
