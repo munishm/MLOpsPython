@@ -89,7 +89,7 @@ stages:
     dependsOn: "Run_ML_Pipeline"
     condition: always()
     displayName: "Publish artifact if new model was registered"
-    container: mlops
+    #container: mlops
     timeoutInMinutes: 0
     steps:
     - template: driver_training-publish-model-artifact-template.yml
