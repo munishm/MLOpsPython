@@ -37,7 +37,7 @@ stages:
   jobs:
   - job: "Deploy_ACI"
     displayName: "Deploy to ACI"
-    container: mlops
+   # container: mlops
     timeoutInMinutes: 0
     steps:
     - download: none
