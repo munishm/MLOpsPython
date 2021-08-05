@@ -14,8 +14,6 @@ trigger:
     include:
     - driver_training/
     - ml_service/pipelines/driver_training_build_train_pipeline.py
-    - ml_service/pipelines/driver_training_build_train_pipeline_with_r.py
-    - ml_service/pipelines/driver_training_build_train_pipeline_with_r_on_dbricks.py
 
 variables:
 - template: driver_training-variables-template.yml
