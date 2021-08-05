@@ -20,7 +20,7 @@ variables:
 
   # Azure ML Variables
   - name: EXPERIMENT_NAME
-    value: mlopspython
+    value: mlopsjal
   - name: DATASET_NAME
     value: BSM-dataset
   # Uncomment DATASTORE_NAME if you have configured non default datastore to point to your data
@@ -35,7 +35,7 @@ variables:
 
   # AML Compute Cluster Config
   - name: AML_ENV_NAME
-    value: driver_training_training_env
+    value: driver_training_env
   - name: AML_ENV_TRAIN_CONDA_DEP_FILE
     value: "conda_dependencies.yml"
   - name: AML_COMPUTE_CLUSTER_CPU_SKU
