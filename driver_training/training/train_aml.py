@@ -153,6 +153,7 @@ def main():
 
     # Split the data into test/train
     df = dataset.to_pandas_dataframe()
+    print(df.head())
     data = split_data(df)
 
     # Train the model
