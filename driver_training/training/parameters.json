@@ -1,0 +1,26 @@
+{
+    "training":
+    {
+        "learning_rate": 0.01,
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "metric": "auc",
+        "sub_feature": 0.7,
+        "num_leaves": 80,
+        "min_data": 100,
+        "min_hessian": 1,
+        "verbose": 0
+    },
+    "evaluation":
+    {
+
+    },
+    "registration":
+    {
+        "tags": ["mse"]
+    },
+    "scoring":
+    {
+        
+    }
+}

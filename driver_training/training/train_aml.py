@@ -23,12 +23,20 @@ IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THE SOFTWARE CODE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 """
-from azureml.core.run import Run
-from azureml.core import Dataset, Datastore, Workspace
+# pylint: disable=unused-variable
+# pylint: disable=invalid-name
+# pylint: disable=too-many-locals
+# pylint: disable=missing-function-docstring
+# pylint: disable=too-many-statements
+# pylint: disable=bad-continuation
+# pylint: disable=line-too-long
+
 import os
 import argparse
-import joblib
 import json
+import joblib
+from azureml.core.run import Run
+from azureml.core import Dataset, Datastore, Workspace
 from train import split_data, train_model, get_model_metrics
 
 
@@ -126,8 +134,8 @@ def main():
         run.parent.log(k, v)
 
     # Get the dataset
-    if (dataset_name):
-        if (data_file_path == 'none'):
+    if dataset_name:
+        if data_file_path == 'none':
             dataset = Dataset.get_by_name(run.experiment.workspace, dataset_name, dataset_version)  # NOQA: E402, E501
         else:
             dataset = register_dataset(run.experiment.workspace,
