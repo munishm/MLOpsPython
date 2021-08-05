@@ -70,7 +70,8 @@ stages:
     
 
   - job: 
-    displayName: "Deploy to ACI"
+    displayName: "Smoke_Test"
+    dependsOn: Deploy_ACI
     container: mlops
     steps:
      - task: AzureCLI@1
