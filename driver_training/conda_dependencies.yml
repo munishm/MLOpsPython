@@ -28,6 +28,7 @@ dependencies:
       - pandas
       - numpy
       - azure-ml-api-sdk
+      - azureml-dataprep
 
       # Must match AzureML SDK version.
       # https://docs.microsoft.com/en-us/azure/machine-learning/concept-environments
