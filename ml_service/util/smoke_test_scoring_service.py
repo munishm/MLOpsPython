@@ -44,7 +44,7 @@ def call_web_app(url, headers):
     headers['traceparent'] = "00-{0}-{1}-00".format(
         secrets.token_hex(16), secrets.token_hex(8))
 
-    retries = 600
+    retries = 10
     for i in range(retries):
         try:
             response = requests.post(
