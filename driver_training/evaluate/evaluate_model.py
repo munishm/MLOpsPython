@@ -99,7 +99,7 @@ if (args.run_id is not None):
 if (run_id == 'amlcompute'):
     run_id = run.parent.id
 model_name = args.model_name
-metric_eval = "mse"
+metric_eval = "auc"
 
 allow_run_cancel = args.allow_run_cancel
 # Parameterize the matrices on which the models should be compared
@@ -132,7 +132,7 @@ try:
                 )
             )
 
-        if (new_model_mse < production_model_mse):
+        if (new_model_mse > production_model_mse):
             print("New trained model performs better, "
                   "thus it should be registered")
         else:
