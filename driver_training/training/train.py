@@ -72,8 +72,12 @@ def get_model_metrics(model, data):
     """Construct a dictionary of metrics for the model"""
 
     predictions = model.predict(data[1].data)
-    fpr, tpr, thresholds = metrics.roc_curve(data[1].label, predictions)
-    model_metrics = {"auc": (metrics.auc(fpr, tpr))}
+    fpr, tpr, thresholds = metrics.roc_curve(data[1].label, predictions)  
+    fprAvg = np.average(fpr)
+    tprAvg = np.average(tpr)
+    f1Score= (2 * (fprAvg * tprAvg)) / (fprAvg + tprAvg)
+    print(f1Score)
+    model_metrics = {"auc": (metrics.auc(fpr, tpr)), "f1_score" : f1Score}
 
     return model_metrics
 
